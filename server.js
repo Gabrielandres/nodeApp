@@ -3,6 +3,8 @@ var app = express()
 
 app.set("port", (process.env.PORT || 3000));
 
+app.use(express.static('public'));
+
 app.get("/getPerson", getPerson);
 
 app.listen(app.get("port"), function(){
@@ -14,4 +16,7 @@ app.listen(app.get("port"), function(){
 function getPerson(req, res) {
     	
 	console.log("Getting person information");
+	var result = {id: 238, first: "Gabriel", last: "Andres"};
+	
+	res.json(result);
 }
