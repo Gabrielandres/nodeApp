@@ -5,9 +5,9 @@ app.set("port", (process.env.PORT || 3000));
 
 app.use(express.static('public'));
 
-app.get("/homePage.html", getHomePage);
+app.get("/loginCredentials/index", getHomePage);
 app.get("/loginCredentials/register", getRegister);
-app.get("/loginCredentials/login", getLogin);
+app.get("/homePage.html", getLogin);
 app.get("/loginCredentials/dashboard", getDashboard);
 
 app.listen(app.get("port"), function(){
