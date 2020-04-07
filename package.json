@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/Gabrielandres/nodeApp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "pg": "^8.0.0"
   }
 }
