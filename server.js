@@ -96,9 +96,28 @@ app.post("/loginCredentials/index", function (req, res) {
 
     } else{
 		
+		var sql = "SELECT id, username, password FROM loginCredentials WHERE id = $1::init;";
+		pool.query(sql, function(err, results) {
+			
+			if (err) {
+					
+				throw err;
+			}else {
+				
+				console.log("Back db with: ");
+				console.log(results);
+			}
+			
+		}
+		
+		
+		
+		);
+		
+		//var sql = "SELECT iusername FROM loginCredentials";
+	/*
 		pool.query (
-			`SELECT * FROM loginCredentials
-			WHERE username = $1`, 
+			"SELECT * FROM loginCredentials WHERE username = $1", 
 			[username],
 			(err, results) => {
 				
@@ -120,9 +139,9 @@ app.post("/loginCredentials/index", function (req, res) {
 	console.log({
 		username, password, password2
 	});	
-   
+   */
 	//res.render("login");
-	
+}
 });
 
 function getRegister(req, res) {
